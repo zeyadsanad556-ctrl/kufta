@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d32f2f" />
+    <title>كوفتا | إدارة الفروع والمخزون</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="auth-root"></div>
+    <div class="app-shell" id="app-shell" hidden>
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" data-page="overview" aria-label="كوفتا - الرئيسية">
+          <img class="brand-logo" src="logo.png" alt="شعار كوفتا" />
+          <span class="brand-copy"><small>إدارة الفروع والمخزون</small></span>
+        </a>
+        <div class="role-badge"><span class="online-dot"></span><span id="role-label"></span></div>
+        <div class="nav-label">القائمة الرئيسية</div>
+        <nav class="navigation" id="navigation"></nav>
+        <div class="sidebar-footer">
+          <div class="user-avatar" id="user-initial">م</div>
+          <div class="user-info"><strong id="user-name"></strong><small id="user-subtitle"></small></div>
+          <button class="logout-button" id="password-button" aria-label="تغيير كلمة المرور" title="تغيير كلمة المرور">⚿</button>
+          <button class="logout-button" id="logout-button" aria-label="تسجيل الخروج" title="تسجيل الخروج">↪</button>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" id="menu-button" aria-label="فتح القائمة">☰</button>
+          <div class="breadcrumb"><img class="topbar-logo" src="logo.png" alt="كوفتا" /><b>/</b><strong id="page-breadcrumb">نظرة عامة</strong></div>
+          <div class="topbar-actions">
+            <span class="current-date" id="current-date"></span>
+            <button class="notification-button" id="notification-button" aria-label="الإشعارات"><span>♧</span><i id="notification-count" hidden></i></button>
+            <div class="top-avatar" id="top-avatar">م</div>
+          </div>
+        </header>
+        <section class="page-content" id="page-content"></section>
+        <footer class="page-footer"><span>كوفتا لإدارة الفروع والمخزون</span><span>البيانات محفوظة في قاعدة بيانات النظام</span></footer>
+      </main>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <div class="modal-layer" id="modal-layer" aria-hidden="true"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
